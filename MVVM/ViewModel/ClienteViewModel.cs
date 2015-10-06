@@ -81,8 +81,7 @@ namespace Pattern.MVVM_Example.MVVM.ViewModel
             this.Add(clClient3);
 
             AddClientCommand = new CommandBase(param => this.AddClient());
-            ClearCommand = new CommandBase(new Action<Object>(ClearClient));
-            DeleteCommand = new CommandBase(param=>DeleteClient());
+            ClearCommand = new CommandBase(new Action<Object>(ClearClient));           
         }
 
         #endregion
@@ -116,17 +115,7 @@ namespace Pattern.MVVM_Example.MVVM.ViewModel
             LastName = "";
         }
 
-        private void DeleteClient()
-        {
-            Client vlClient = new Client() { Id = Id, Name = Name, LastName = LastName };
-            int i = this.IndexOf(vlClient);
-            if (this.Items.Contains(vlClient))
-            {
-                int index = this.IndexOf(vlClient);
-                this.RemoveAt(index);
-            }
-        }
-
+       
         #endregion
     }
 }

@@ -33,7 +33,6 @@
         <StackPanel x:Name="stcpButtons" Orientation="Horizontal" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Margin="20 10 20 10 ">
             <Button Content="Clear" Height="40" Width="60" Command="{Binding ClearCommand}"/>
             <Button Content="Add" Height="40" Width="60" Margin="10 0 0 0" Command="{Binding AddClientCommand}"/>
-            <Button Content="Delete" Height="40" Width="60" Margin="10 0 0 0" Command="{Binding DeleteCommand}"/>
         </StackPanel>
 
         <ListView x:Name="lvClients" SelectedIndex="{Binding SelectedIndexOfCollection, Mode=TwoWay}" MinHeight="50" ItemsSource="{StaticResource ResourceKey=clientViewModel}" DisplayMemberPath="DisplayName"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="20 10 20 50"/>
